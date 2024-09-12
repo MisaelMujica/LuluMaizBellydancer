@@ -1,4 +1,4 @@
-/*ESTILOS GENERALES*/
+/*==================================ESTILOS GENERALES==================================*/
 html {
     background: url(lulu/assets/images/bg.svg) no-repeat;
     -webkit-background-size: cover;
@@ -38,8 +38,7 @@ body {
 
 
 
-/*ESTILOS PARTICULARES*/
-
+/*================================ESTILOS PARTICULARES================================*/
 #header {
     height: 120px;
     width: 100%;
@@ -111,9 +110,7 @@ body {
 
 
 
-
-
-/*HERO*/
+/*========================================HERO========================================*/
 #hero {
     justify-content: center;
 }
@@ -154,12 +151,7 @@ body {
 
 
 
-
-
-
-
-
-/*BIO*/
+/*=========================================BIO=========================================*/
 #bio {
     margin-top: 200px;
 }
@@ -202,14 +194,7 @@ body {
 
 
 
-
-
-
-
-/*Servicios*/
-
-
-
+/*======================================Servicios======================================*/
 #servicios p {
     margin-bottom: 15px;
 }
@@ -312,17 +297,7 @@ input:checked+label .description {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*INFINITE GALLERY*/
+/*====================================INFINITE GALLERY=================================*/
 .galeria-info {
     margin-top: 200px;
     margin-bottom: 30px;
@@ -389,23 +364,7 @@ input:checked+label .description {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*CONTACTO*/
+/*===================================CONTACTO========================================*/
 .contacto-info {
     margin-top: 200px;
 
@@ -445,10 +404,6 @@ input:checked+label .description {
     /*box-shadow: 2px 2px 5px hwb(287 22% 62%);*/
 }
 
-
-
-
-
 .logo-completo {
     margin-top: -55px;
     width: 150px;
@@ -463,17 +418,7 @@ input:checked+label .description {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*FOOTER*/
+/*==================================FOOTER===================================*/
 #footer {
     border-top: 4px solid rgb(224, 122, 255);
     margin-top: 15px;
@@ -522,17 +467,20 @@ input:checked+label .description {
 }
 
 
+.misalink {
+    color: white;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.misalink:hover {
+    color:rgb(0, 89, 255);
+}
 
 
 
-
-
-
-
-
-
-
-/*RESPONSIVE*/
+/*==============================RESPONSIVE=============================*/
 @media (max-width: 1320px) {
     .center {
         width: auto;
@@ -606,6 +554,9 @@ input:checked+label .description {
         margin-right: 10px;
         margin-left: 10px;
     }
+    .app-logo {
+        display: none;
+    }
 }
 
 @media (max-width: 417px) {
@@ -630,6 +581,9 @@ input:checked+label .description {
     .columna {
         grid-column: span 2 / span 2;
     }
+    .app-logo {
+        display: none;
+    }
 }
 
 @media (max-width: 425px) {
@@ -640,6 +594,9 @@ input:checked+label .description {
 
     .lulubio {
         width: 100px;
+    }
+    .app-logo {
+        display: none;
     }
 }
 
@@ -652,4 +609,52 @@ input:checked+label .description {
     .lulubio {
         width: 80px;
     }
+    .app-logo {
+        display: none;
+    }
 }
+
+
+
+/*=============ANIMACIONES PARA REVELAR LOS ELEMENTOS EN LA VENTANA===============*/
+.reveal {
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.5s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.reveal.from-left {
+    transform: translateX(-200px);
+}
+
+.reveal.from-right {
+    transform: translateX(100px);
+}
+
+.reveal.from-top {
+    transform: translateY(-100px);
+}
+
+.reveal.from-bottom {
+    transform: translateY(100px);
+}
+
+.reveal.active.from-left,
+.reveal.active.from-right,
+.reveal.active.from-top,
+.reveal.active.from-bottom {
+    transform: translateX(0);
+    transform: translateY(0);
+}
+#primera-seccion {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+  
+#primera-seccion.visible {
+    opacity: 1;
+  }
+  
